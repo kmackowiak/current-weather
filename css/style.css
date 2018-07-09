@@ -1,0 +1,40 @@
+
+body {
+    font-size: 16px;
+}
+
+
+
+#map-container {
+    height: 300px;
+}
+
+.leaflet-popup-content-wrapper {
+    text-align: left;
+}
+
+
+.popup {
+    font-size: 0.8rem;
+
+
+}
+.popup--title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+
+}
+
+.popup--subtitle
+{
+
+    font-weight: 600;
+    text-transform: capitalize;
+
+
+}
+
+.popup--info {
+
+}
