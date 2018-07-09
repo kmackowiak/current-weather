@@ -31,7 +31,7 @@ function createMapContainer(){
 
 // ________ Download data of choice city
 function getTemperature(city){
-    fetch('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&APPID=e589a09c9a4af75930b36642dac4e5ad')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&APPID=e589a09c9a4af75930b36642dac4e5ad')
         .then(weatherData => weatherData.json())
         .then(weatherData => {
             var temp = (weatherData.main.temp);
