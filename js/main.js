@@ -5,6 +5,9 @@ var submitButton = document.getElementById("submit-button");
 var cityName = document.getElementById("city-name");
 
 
+
+
+
 // ________ Run program if Submit is clicked
 submitButton.addEventListener("click", function () {
     var mapContainer = document.getElementById("map-container");
@@ -25,7 +28,7 @@ submitButton.addEventListener("click", function () {
 function createMapContainer(){
     var mapContainer = document.createElement("div");
     mapContainer.setAttribute("id", "map-container");
-    document.body.appendChild(mapContainer);
+    document.getElementById("container").appendChild(mapContainer);
 }
 
 
