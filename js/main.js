@@ -6,8 +6,6 @@ var cityName = document.getElementById("city-name");
 
 
 
-
-
 // ________ Run program if Submit is clicked
 submitButton.addEventListener("click", function () {
     var mapContainer = document.getElementById("map-container");
@@ -21,7 +19,8 @@ submitButton.addEventListener("click", function () {
         createMapContainer()
         getTemperature(cityName.value);
     }
-})
+});
+
 
 
 // ________ Create container for map
@@ -29,7 +28,8 @@ function createMapContainer(){
     var mapContainer = document.createElement("div");
     mapContainer.setAttribute("id", "map-container");
     document.getElementById("container").appendChild(mapContainer);
-}
+};
+
 
 
 // ________ Download data of choice city
@@ -46,7 +46,9 @@ function getTemperature(city){
             var description = (weatherData.weather[0].description);
             initmap(city, temp, longitude, latitude, pressure, humidity, wind, description)
         })
-}
+};
+
+
 
 // ________ Move data of city to map
 function initmap(city, temp, longitude, latitude, pressure, humidity, wind, description) {
@@ -58,10 +60,7 @@ function initmap(city, temp, longitude, latitude, pressure, humidity, wind, desc
     var osmUrl='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var osmAttrib=' © <a href="https://openstreetmap.org">OpenStreetMap</a> | © <a href="https://openweathermap.org">OpenWeatherMap</a>';
 
-
     var mapInfo = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 12, attribution: osmAttrib});
-
-
 
     // Set the view of map
     map.setView(new L.LatLng(latitude, longitude),9);
@@ -69,7 +68,6 @@ function initmap(city, temp, longitude, latitude, pressure, humidity, wind, desc
 
     // Set the marker of map
     var marker = L.marker([latitude, longitude]).addTo(map)
-    // marker.bindPopup("<b>" + city + "</b><br />Temperature: "  + temp + " °C").openPopup();
     marker.bindPopup(
         "<span class='popup popup--title'>" + city + "<br></span>" +
         "<span class='popup popup--subtitle'>" + description + "</span>" +
@@ -80,7 +78,7 @@ function initmap(city, temp, longitude, latitude, pressure, humidity, wind, desc
         "Humidity: " + humidity + "%<br>" +
         "Wind speed: " + wind + " km/h<br>" +
         "</span>").openPopup();
-}
+};
 
 
 

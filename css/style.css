@@ -4,16 +4,12 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url("../img/header.jpg");
+    background: url("../img/bg.jpg");
     background-size: cover;
     background-position: 50% 90%;
 }
 
 .container {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: flex-start;*/
-    /*align-items: center;*/
     height: 100vh;
     width: 100vw;
     margin: 0rem;
@@ -28,7 +24,6 @@ body {
     right: calc(50% - 8rem);
     z-index: 4;
 }
-
 
 .check-weather__city {
     height: 3.2rem;
@@ -48,46 +43,33 @@ body {
     border: solid rgba(193,193,193,0.3);
     border-width: 2px 2px 2px 2px;
     border-radius: 2px;
-
-
-
 }
 
 #map-container {
-height: calc(100% - 2rem);
-width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem);
     z-index: 1;
     margin: 1rem;
     border: 1px solid #2C84CB;
-
 }
 
 .leaflet-popup-content-wrapper {
     text-align: left;
 }
 
-
 .popup {
     font-size: 0.8rem;
-
-
 }
+
 .popup--title {
     font-size: 1.2rem;
     font-weight: 600;
     text-transform: capitalize;
-
 }
 
 .popup--subtitle
 {
-
     font-weight: 600;
     text-transform: capitalize;
-
-
 }
 
-.popup--info {
-
-}
